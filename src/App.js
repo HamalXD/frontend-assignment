@@ -1,13 +1,11 @@
 import './App.css';
-import Navigation from './components/Navigation/navigation';
-import APIcall from "./DataCall/callAPI"
+import Main from './Main';
 
 function App() {
   return (
-    <>
-    <Navigation/>
-    <APIcall/>
-    </>
+    <div>
+      <Main/>
+    </div>
   );
 }
 
