@@ -1,11 +1,11 @@
-nav {
+/* nav {
     display: flex;
     border:2px solid grey;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
     z-index: 999;
-    /* margin-left: 2rem; */
+    margin-left: 2rem;
 }
 
 input {
@@ -23,4 +23,4 @@ input {
     height: 1.5rem;
     margin-left: 2rem;
     color: black;
-}
+} */

@@ -1,6 +1,5 @@
 import React from "react"
 import { useState, useEffect } from "react"
-// import Box from "@mui/system";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -9,11 +8,11 @@ import { Divider } from "@mui/material";
 const APIcall = () => {
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(false)
+
     const getData = () => {
         setLoading(true)
         fetch('https://fakestoreapi.com/products')
         .then(res=>res.json())
-        // .then(json=>console.log(json))
         .then(data=>{
             setData(data);
             setLoading(false)
@@ -31,11 +30,12 @@ const APIcall = () => {
                             return(
                                 <List className="HeadersList" key={fetch.number}>
                                     <ListItem disablePadding>
+                                        <img src = {`${fetch.image}`} alt= {`${fetch.title}`} height='200px' width='200px'/>
                                         {fetch.title}<br/>
-                                        {fetch.image}<br/>
                                         {fetch.price}<br/>
+                                        {fetch.description}
                                     </ListItem>
-                                    <br/> <Divider/>
+                                    <br/><Divider/>
                                 </List>
                             )
                         })}
